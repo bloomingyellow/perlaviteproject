@@ -1,0 +1,296 @@
+/* ── Perla Vita — Auth Styles ────────────────────────────────── */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Logo above card */
+.auth-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 32px;
+  gap: 4px;
+}
+.auth-logo .logo-main {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  color: var(--gold-light, #c9a84c);
+}
+.auth-logo .logo-sub {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.28em;
+  color: rgba(240,230,214,0.45);
+  text-transform: uppercase;
+}
+
+/* Card */
+.auth-card {
+  background: rgba(10, 18, 34, 0.88);
+  border: 1px solid rgba(201, 168, 76, 0.18);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 460px;
+  padding: 40px 44px 44px;
+  backdrop-filter: blur(20px);
+  box-shadow:
+    0 32px 80px rgba(0,0,0,0.6),
+    0 0 0 1px rgba(201,168,76,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+/* Gem icon */
+.auth-gem {
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--gold-light, #c9a84c);
+  margin-bottom: 24px;
+  opacity: 0.7;
+}
+
+/* Tabs */
+.auth-tabs {
+  display: flex;
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  margin-bottom: 28px;
+  gap: 0;
+}
+.auth-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  color: rgba(240,230,214,0.4);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 10px 0 14px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.25s;
+}
+.auth-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0; right: 0;
+  height: 2px;
+  background: var(--gold-light, #c9a84c);
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+}
+.auth-tab.active {
+  color: var(--gold-light, #c9a84c);
+}
+.auth-tab.active::after {
+  transform: scaleX(1);
+}
+
+/* Panels */
+.auth-panel { display: none; }
+.auth-panel.active { display: block; }
+
+.auth-sub {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(240,230,214,0.45);
+  letter-spacing: 0.04em;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+/* Grid for first/last name */
+.auth-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* Fields */
+.auth-field {
+  margin-bottom: 18px;
+}
+.auth-field label {
+  display: block;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.67rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(240,230,214,0.5);
+  margin-bottom: 7px;
+}
+.auth-hint {
+  font-size: 0.62rem;
+  color: rgba(240,230,214,0.28);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.auth-field input {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,168,76,0.18);
+  border-radius: 2px;
+  color: rgba(240,230,214,0.9);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.82rem;
+  padding: 11px 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s, background 0.2s;
+}
+.auth-field input:focus {
+  border-color: rgba(201,168,76,0.6);
+  background: rgba(255,255,255,0.07);
+}
+.auth-field input::placeholder {
+  color: rgba(240,230,214,0.2);
+}
+
+/* Submit button */
+.auth-submit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #c9a84c 0%, #e8c87a 50%, #c9a84c 100%);
+  color: #060d18;
+  border: none;
+  border-radius: 2px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 16px 24px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.auth-submit:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+.auth-submit-icon { font-size: 0.9rem; }
+
+/* Switch link */
+.auth-switch {
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  color: rgba(240,230,214,0.35);
+  margin-top: 22px;
+  letter-spacing: 0.04em;
+}
+.auth-switch a {
+  color: var(--gold-light, #c9a84c);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201,168,76,0.3);
+  padding-bottom: 1px;
+  transition: border-color 0.2s;
+}
+.auth-switch a:hover { border-color: var(--gold-light, #c9a84c); }
+
+/* Alerts */
+.auth-alert {
+  border-radius: 2px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  padding: 11px 14px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.auth-alert--error {
+  background: rgba(224,112,112,0.1);
+  border: 1px solid rgba(224,112,112,0.3);
+  color: #e07070;
+}
+.auth-alert--success {
+  background: rgba(201,168,76,0.1);
+  border: 1px solid rgba(201,168,76,0.3);
+  color: var(--gold-light, #c9a84c);
+}
+
+/* Nav user pill */
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-user-name {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: rgba(240,230,214,0.6);
+  text-transform: uppercase;
+}
+.nav-logout {
+  background: none;
+  border: 1px solid rgba(201,168,76,0.25);
+  color: rgba(201,168,76,0.7);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.nav-logout:hover {
+  border-color: rgba(201,168,76,0.6);
+  color: var(--gold-light, #c9a84c);
+}
+
+/* Login gate overlay (when cart tries to checkout) */
+.login-gate {
+  background: rgba(10,18,34,0.96);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 4px;
+  padding: 32px;
+  text-align: center;
+  margin: 20px 0;
+}
+.login-gate p {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(240,230,214,0.55);
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+.login-gate a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #c9a84c, #e8c87a, #c9a84c);
+  color: #060d18;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 13px 28px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.login-gate a:hover { opacity: 0.88; }
+
+@media (max-width: 520px) {
+  .auth-card { padding: 32px 24px 36px; }
+  .auth-grid { grid-template-columns: 1fr; }
+}

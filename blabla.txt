@@ -1,0 +1,1 @@
+make it originized and use it normally with html and  php somethings seperated (without class without poo etc just make as someone who is started on php) and make each one with the name to it function in french and make another dir with the same name but it have the explenation for each file and what functions and each line uses

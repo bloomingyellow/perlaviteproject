@@ -1,0 +1,84 @@
+/* ─── Profile Page ─── */
+.profile-page {
+  min-height: 100vh;
+  padding: 120px 24px 60px;
+  display: flex; align-items: flex-start; justify-content: center;
+}
+
+.profile-card {
+  width: 100%; max-width: 580px;
+  background: var(--glass-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 48px;
+}
+
+.profile-header {
+  display: flex; align-items: center; gap: 28px;
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.profile-avatar-wrap {
+  position: relative; flex-shrink: 0;
+  width: 90px; height: 90px;
+}
+
+.profile-avatar-img {
+  width: 90px; height: 90px; border-radius: 50%; object-fit: cover;
+  border: 2px solid var(--gold-light);
+}
+
+.profile-avatar-placeholder {
+  width: 90px; height: 90px; border-radius: 50%;
+  background: rgba(212,174,90,0.15);
+  border: 2px solid var(--glass-border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem; font-weight: 400;
+  color: var(--gold-light);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.profile-avatar-change {
+  position: absolute; bottom: 2px; right: 2px;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--gold);
+  color: var(--navy-dark);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; border: 2px solid var(--navy-dark);
+  transition: background 0.2s;
+}
+.profile-avatar-change:hover { background: var(--gold-bright); }
+
+.profile-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem; font-weight: 400; color: var(--cream);
+  margin-bottom: 6px;
+}
+
+.profile-email {
+  font-size: 0.78rem; color: rgba(240,230,214,0.5);
+  margin-top: 6px;
+}
+
+.profile-role-badge {
+  display: inline-block;
+  padding: 3px 10px; border-radius: 20px;
+  font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase;
+}
+.profile-role-admin {
+  background: rgba(212,174,90,0.2); color: var(--gold-light);
+  border: 1px solid rgba(212,174,90,0.4);
+}
+.profile-role-user {
+  background: rgba(100,140,200,0.12); color: rgba(180,200,240,0.8);
+  border: 1px solid rgba(100,140,200,0.25);
+}
+
+.profile-section-title {
+  font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold-light); margin-bottom: 18px;
+}
+
+.profile-form { margin-top: 8px; }
